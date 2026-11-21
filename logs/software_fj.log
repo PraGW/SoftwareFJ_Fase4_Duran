@@ -1,0 +1,86 @@
+2026-11-21 00:18:47 | INFO     | main         | ========================= INICIO DE LA SIMULACIÓN =========================
+2026-11-21 00:18:47 | INFO     | sistema      | Sistema Software FJ iniciado.
+2026-11-21 00:18:47 | INFO     | sistema      | Cliente registrado: CLI-001 | Laura Gómez Ríos | Doc. ******4567 | laura.gomez@gmail.com
+2026-11-21 00:18:47 | INFO     | sistema      | Op 01 - Exitosa: Registrar cliente válido enviado como objeto
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 01 - Finalizada: Registrar cliente válido enviado como objeto
+2026-11-21 00:18:47 | INFO     | sistema      | Cliente registrado: CLI-002 | Carlos Andrés Peña | Doc. ****2876 | carlos.pena@outlook.com
+2026-11-21 00:18:47 | INFO     | sistema      | Op 02 - Exitosa: Registrar cliente válido enviado como diccionario
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 02 - Finalizada: Registrar cliente válido enviado como diccionario
+2026-11-21 00:18:47 | INFO     | sistema      | Cliente registrado: CLI-003 | María José Ardila | Doc. ******8123 | mjardila@unad.edu.co
+2026-11-21 00:18:47 | INFO     | sistema      | Op 03 - Exitosa: Registrar cliente válido enviado como tupla
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 03 - Finalizada: Registrar cliente válido enviado como tupla
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 04 - [SFJ-101] El correo 'pedro.salazar@' no tiene un formato válido.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 04 - Finalizada: Registrar cliente con correo inválido
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 05 - [SFJ-102] Los datos del cliente están incompletos o tienen campos de más: ['correo', 'documento', 'nombre']. | causa: TypeError: Cliente.__init__() missing 1 required positional argument: 'telefono'
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 05 - Finalizada: Registrar cliente sin el campo teléfono
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 06 - [SFJ-600] Ya existe un cliente con el documento ******4567.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 06 - Finalizada: Registrar un cliente con documento ya registrado
+2026-11-21 00:18:47 | INFO     | sistema      | Servicio agregado: SRV-001 | Sala 'Sala Magdalena' para 30 personas | $80,000 por hora | disponible
+2026-11-21 00:18:47 | INFO     | sistema      | Op 07 - Exitosa: Crear servicio de reserva de sala
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 07 - Finalizada: Crear servicio de reserva de sala
+2026-11-21 00:18:47 | INFO     | sistema      | Servicio agregado: SRV-002 | Equipo 'Video beam Epson' | $45,000 por día + seguro 5% | unidades libres: 1
+2026-11-21 00:18:47 | INFO     | sistema      | Op 08 - Exitosa: Crear servicio de alquiler de equipo
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 08 - Finalizada: Crear servicio de alquiler de equipo
+2026-11-21 00:18:47 | INFO     | sistema      | Servicio agregado: SRV-003 | Asesoría 'Asesoría en ciberseguridad' en Seguridad informática | nivel experto | $120,000 por hora | disponible
+2026-11-21 00:18:47 | INFO     | sistema      | Op 09 - Exitosa: Crear servicio de asesoría especializada
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 09 - Finalizada: Crear servicio de asesoría especializada
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 10 - [SFJ-103] La tarifa de 'Sala Yariguíes' debe ser mayor que cero.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 10 - Finalizada: Crear sala con tarifa negativa
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 11 - [SFJ-103] El nivel 'maestro' no existe. Use: basico, intermedio, experto.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 11 - Finalizada: Crear asesoría con un nivel inexistente
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-001 creada para Laura Gómez Ríos en 'Sala Magdalena'.
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-001 confirmada por $328,440.00.
+2026-11-21 00:18:47 | INFO     | sistema      | Op 12 - Exitosa: Reservar y confirmar la sala por 3 horas con IVA
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 12 - Finalizada: Reservar y confirmar la sala por 3 horas con IVA
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-002 creada para Carlos Andrés Peña en 'Sala Magdalena'.
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-002 cancelada. Motivo: No se pudo confirmar.
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 13 - [SFJ-300] La reserva RES-002 no se pudo confirmar. | causa: ServicioNoDisponibleError: [SFJ-200] El servicio 'Sala Magdalena' no está disponible.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 13 - Finalizada: Reservar la misma sala mientras está ocupada
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 14 - [SFJ-300] No se pudo crear la reserva de 'Asesoría en ciberseguridad': duración inválida. | causa: DatoInvalidoError: [SFJ-100] 'Asesoría en ciberseguridad' admite de 1 a 8 horas; se pidieron 15.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 14 - Finalizada: Reservar asesoría por 15 horas
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 15 - [SFJ-300] No hay ningún cliente registrado con el documento 123456789.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 15 - Finalizada: Reservar con un cliente no registrado
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-003 creada para María José Ardila en 'Asesoría en ciberseguridad'.
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-003 cancelada. Motivo: No se pudo confirmar.
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 16 - [SFJ-500] No se pudo calcular el costo de RES-003. | causa: DatoInvalidoError: [SFJ-100] El descuento '1.5' debe estar entre 0 y 1.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 16 - Finalizada: Reservar asesoría con un descuento del 150 %
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-004 creada para Carlos Andrés Peña en 'Video beam Epson'.
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-004 confirmada por $202,419.00.
+2026-11-21 00:18:47 | INFO     | sistema      | Op 17 - Exitosa: Reservar video beam por 4 días con IVA y 10 % de descuento
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 17 - Finalizada: Reservar video beam por 4 días con IVA y 10 % de descuento
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 18 - [SFJ-500] No hay reservas procesadas para calcular el promedio. | causa: ZeroDivisionError: division by zero
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 18 - Finalizada: Calcular el ingreso promedio antes de recibir pagos
+2026-11-21 00:18:47 | DEBUG    | reserva      | Intento de procesar RES-001 con pago=200000.
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 19 - [SFJ-500] Pago insuficiente en RES-001: faltan $128,440.00.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 19 - Finalizada: Pagar la reserva de la sala con dinero insuficiente
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-001 procesada. Pago $350,000.00, cambio $21,560.00.
+2026-11-21 00:18:47 | DEBUG    | reserva      | Intento de procesar RES-001 con pago=350000.
+2026-11-21 00:18:47 | INFO     | sistema      | Op 20 - Exitosa: Pagar la reserva de la sala con $350.000
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 20 - Finalizada: Pagar la reserva de la sala con $350.000
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-004 cancelada. Motivo: El cliente cambió la fecha.
+2026-11-21 00:18:47 | INFO     | sistema      | Op 21 - Exitosa: Cancelar la reserva del video beam
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 21 - Finalizada: Cancelar la reserva del video beam
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 22 - [SFJ-400] La reserva RES-004 ya está cancelada y no se puede cancelar.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 22 - Finalizada: Cancelar de nuevo la reserva del video beam
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 23 - [SFJ-400] La reserva RES-004 está cancelada; solo se procesan reservas confirmadas.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 23 - Finalizada: Cobrar una reserva que ya fue cancelada
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-005 creada para María José Ardila en 'Asesoría en ciberseguridad'.
+2026-11-21 00:18:47 | INFO     | reserva      | Reserva RES-005 confirmada por $384,000.00.
+2026-11-21 00:18:47 | DEBUG    | reserva      | Intento de procesar RES-005 con pago='trescientos mil'.
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 24 - [SFJ-100] El pago 'trescientos mil' no es un valor numérico. | causa: TypeError: unsupported operand type(s) for -: 'str' and 'float'
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 24 - Finalizada: Pagar con un valor escrito en texto
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 25 - [SFJ-100] No se puede registrar un cliente a partir de un dato tipo list.
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 25 - Finalizada: Registrar un cliente enviando una lista
+2026-11-21 00:18:47 | ERROR    | sistema      | Op 26 - Error inesperado: 'Cliente' object has no attribute 'direccion'
+Traceback (most recent call last):
+  File "c:\Users\Juana\OneDrive\Documentos\GitHub\SoftwareFJ_Fase4_Duran\software_fj\sistema.py", line 195, in ejecutar_operacion
+    resultado = funcion(*args, **kwargs)
+  File "c:\Users\Juana\OneDrive\Documentos\GitHub\SoftwareFJ_Fase4_Duran\main.py", line 149, in <lambda>
+    lambda: sistema.buscar_cliente("1096234567").direccion)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Cliente' object has no attribute 'direccion'
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 26 - Finalizada: Consultar un dato que no existe en el cliente (error no previsto)
+2026-11-21 00:18:47 | INFO     | sistema      | Op 27 - Exitosa: Calcular el ingreso promedio de las reservas pagadas
+2026-11-21 00:18:47 | DEBUG    | sistema      | Op 27 - Finalizada: Calcular el ingreso promedio de las reservas pagadas
+2026-11-21 00:18:47 | INFO     | main         | Simulación terminada: 11 exitosas, 16 fallidas y controladas.
+2026-11-21 00:18:47 | INFO     | main         | ========================= FIN DE LA SIMULACIÓN ===========================
