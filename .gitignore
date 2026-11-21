@@ -1,0 +1,7 @@
+# Archivos generados por Python
+__pycache__/
+*.pyc
+
+# Configuración local del editor
+.vscode/
+.idea/
